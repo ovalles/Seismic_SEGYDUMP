@@ -1,8 +1,18 @@
+<<<<<<< HEAD
+=======
+
+######
+>>>>>>> 9663601456909bd0820b97142261ae4f899de7cd
 SEGYDUMP
 ######
 
 *Segy headers file manipulation toolkit in C*
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 9663601456909bd0820b97142261ae4f899de7cd
 **Main Features**
 
 * Segy header manipulation from terminal
@@ -67,10 +77,19 @@ Authors
 =======
 
 Asdrubal Ovalles. ovallesa@me.com
+<<<<<<< HEAD
 Made in Venezuela, 2016
+=======
+>>>>>>> 9663601456909bd0820b97142261ae4f899de7cd
 
 ==========
 References
 ==========
 
 .. [1] SeGY Rev 1.0
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 9663601456909bd0820b97142261ae4f899de7cd
