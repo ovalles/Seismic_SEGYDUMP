@@ -51,7 +51,9 @@ Finally, enter the newly created directory containing the source code and run:
 
 ::
 
-$ gcc -o Display_TraceHeaders Display_TraceHeaders.c
+$ cd ./01_DISPLAY_HEADERS
+$ gcc -o Display_TrcHeaders Display_TrcHeaders.c
+$ ./Display_TrcHeaders file.sgy MaxNumberOfTracesInFile | more
 
 
 ===========
