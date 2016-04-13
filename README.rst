@@ -62,7 +62,7 @@ Screenshots
 
 * https://github.com/jaxbal/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/01_DisplayTrcHeaders.png
 
-*https://github.com/jaxbal/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/02_DisplayTrcHeaders.png
+* https://github.com/jaxbal/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/02_DisplayTrcHeaders.png
 
 =======
 License
