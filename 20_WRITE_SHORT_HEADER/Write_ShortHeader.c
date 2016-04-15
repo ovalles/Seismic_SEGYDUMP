@@ -1,8 +1,12 @@
+// Modify 2-byte Integer Trace Headers values from SEGY-File
+// By AJ Ovalles, 2016
+// Made in Venezuela
+
 #include <stdio.h>
 #include "endian.h"
 
 
-// Syntax: >> WriteIntHeader filename maxTraceNumber 3600+byteToOverride FirstValue ValueIncrement
+// Syntax: >> WriteShortHeader filename maxTraceNumber 3600+byteToOverride FirstValue ValueIncrement conter
 
 
 char *filename = NULL; //SEGY-File to be edited
@@ -12,13 +16,14 @@ char *str_maxtrc = NULL;  // Max number of traces in SEGY-file
 char *str_inic_byte_pos;
 char *str_firstTrcNum = NULL;  // Header value at first trace
 char *str_ValueIncrement = NULL;  // Header value Increment
-//int inic_byte_pos =3604; // Header to override _must be int 4bytes_
+char *str_conter = NULL;  // Header value Increment
 FILE *fp;
+int conter;
 
 int main(int argc,char* argv[]) {
   
   if (argv[1] == NULL){
-    printf("Syntax: >> WriteShortHeader filename maxTraceNumber 3600+byteToOverride FirstValue ValueIncrement\n");
+    printf("Syntax: >> WriteShortHeader filename maxTraceNumber 3600+byteToOverride FirstValue ValueIncrement CounterToRepeat(Optional)\n");
   }
   else{
 
@@ -41,6 +46,16 @@ int main(int argc,char* argv[]) {
   int ValueIncrement = atoi(str_ValueIncrement);
   printf("Increment %d\n", ValueIncrement );
 
+  
+  if (argv[6] == NULL){
+    conter = maxtrc;
+  }
+  else{
+  str_conter = argv[6];
+  conter = atoi(str_conter);
+  printf("Counter to repeat %d\n", conter );
+  }
+
   short nm;
   fp = fopen(filename,"r+b");  // r for read, b for binary
   fseek( fp, 3220, SEEK_SET );
@@ -52,12 +67,12 @@ int main(int argc,char* argv[]) {
   int trc = strtrc-1;
   int byte_seq_line;
   short seq_line;
-
+  int seq_counter = 0;
   while (trc < maxtrc){ //iterar hasta el maximo numero de traces
 
     fseek( fp, byteOffset, SEEK_CUR );
     //seq_line = trc + firstTrcNum;  //Crea un secuencial
-    seq_line = firstTrcNum + ValueIncrement * trc;
+    seq_line = firstTrcNum + ValueIncrement * seq_counter;
     seq_line = htobe16(seq_line); // Ajusta el endiann del file al del host
     fwrite(&seq_line,sizeof(seq_line),1,fp); // read 4 bytes to our buffer
       
@@ -65,9 +80,15 @@ int main(int argc,char* argv[]) {
 
     //printf("Edited trace: %d\n" , trc + 1);
     trc++;
+    seq_counter++;
+
+    if(seq_counter == conter ){
+      seq_counter = 0;
+    }
+
     byteOffset = nm * 4 + 240 - 2;
   }
-
+  
   fclose(fp); 
   }
   return 0;
