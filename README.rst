@@ -62,7 +62,7 @@ $ ./Display_TrcHeaders file.sgy MaxNumberOfTracesInFile | more
 Screenshots
 ===========
 
-* https://github.com/jaxbal/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/01_DisplayTrcHeaders.png
+.. image:: https://github.com/jaxbal/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/01_DisplayTrcHeaders.png
 
 .. image:: https://github.com/jaxbal/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/02_DisplayTrcHeaders.png
 
