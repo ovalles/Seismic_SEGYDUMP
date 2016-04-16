@@ -43,6 +43,8 @@ Install
 
 Download the latest version from `GitHub`_. If you have ``git`` installed, you can use the following command:
 
+.. _GitHub: https://github.com/jaxbal
+
 ::
 
 $ git clone https://github.com/jaxbal/Seismic_SEGYDUMP.git
@@ -76,7 +78,9 @@ Licensed under the `GPLv3`_ license.
 Authors
 =======
 
-Asdrubal Ovalles. ovallesa@me.com
+`Asdrubal Ovalles`_ 
+
+.. _Asdrubal Ovalles: https://www.linkedin.com/in/asdr%C3%BAbal-ovalles-8401a352
 
 Made in Venezuela, 2016
 
