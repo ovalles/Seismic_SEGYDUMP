@@ -43,11 +43,11 @@ Install
 
 Download the latest version from `GitHub`_. If you have ``git`` installed, you can use the following command:
 
-.. _GitHub: https://github.com/jaxbal
+.. _GitHub: https://github.com/ovalles
 
 ::
 
-$ git clone https://github.com/jaxbal/Seismic_SEGYDUMP.git
+$ git clone https://github.com/ovalles/Seismic_SEGYDUMP.git
 
 Finally, enter the newly created directory containing the source code and run:
 
@@ -62,9 +62,9 @@ $ ./Display_TrcHeaders file.sgy MaxNumberOfTracesInFile | more
 Screenshots
 ===========
 
-.. image:: https://github.com/jaxbal/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/01_DisplayTrcHeaders.png
+.. image:: https://github.com/ovalles/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/01_DisplayTrcHeaders.png
 
-.. image:: https://github.com/jaxbal/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/02_DisplayTrcHeaders.png
+.. image:: https://github.com/ovalles/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/02_DisplayTrcHeaders.png
 
 =======
 License
