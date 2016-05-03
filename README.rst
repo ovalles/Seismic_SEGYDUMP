@@ -63,6 +63,7 @@ Screenshots
 ===========
 
 #.. image:: https://github.com/ovalles/Seismic_SEGYDUMP/blob/master/80_SCREENSHOTS/01_DisplayTrcHeaders.png
+
 .. image:: http://share.gifyoutube.com/KzB6Gb.gif
    :target: https://www.youtube.com/watch?v=bvje_Nt8wic&list=PL7t3mNvsiYoadSfsYG618LIlzkGzGqAf7
 
